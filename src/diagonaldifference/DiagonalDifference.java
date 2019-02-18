@@ -9,16 +9,18 @@ public class DiagonalDifference {
 	public int diffOperation(int m[][])
 	{
 		//System.out.println(m[0][1]);
+		int k=m[0].length-1;
 		for (int i = 0; i < m.length; i++) {
 			int j=i;
 			front = front + m[i][j];
-		}
-		//System.out.println(front);
-		int k=m[0].length-1;
-		for (int i = 0; i < m.length; i++) {
-			
 			back = back + m[i][k];
 			k--;
+		}
+		//System.out.println(front);
+		
+		for (int i = 0; i < m.length; i++) {
+			
+			
 		}
 		//System.out.println(back);
 		//System.out.println((front-back));

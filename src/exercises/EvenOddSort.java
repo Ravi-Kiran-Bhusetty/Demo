@@ -10,20 +10,6 @@ public class EvenOddSort {
 	}
 
 	private static void finalSort(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
-			System.out.print(arr[i]+" ");
-		}
-	}
-
-	private static int[] accept() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the size of array");
-		int size = sc.nextInt();
-		int arr[] = new int[size];
-		System.out.println("Enter array elements");
-		for (int i = 0; i < arr.length; i++) {
-			arr[i] = sc.nextInt();
-		}
 		
 		int c = 0;
 		for (int i = 0; i < arr.length; i++) {
@@ -47,8 +33,10 @@ public class EvenOddSort {
 		
 		Arrays.sort(even);
 		Arrays.sort(odd);
-		int mergedArray[] = new int[size];
-		j = 0;
+		int mergedArray[] = new int[arr.length];
+		System.arraycopy(even, 0, mergedArray, 0, even.length);
+		System.arraycopy(odd, 0, mergedArray, even.length, odd.length);
+		/*j = 0;
 		for (int i = 0; i < mergedArray.length; i++) {
 			if(i<c)
 				mergedArray[i] = even[i];
@@ -56,7 +44,23 @@ public class EvenOddSort {
 				mergedArray[i] = odd[j];
 				j++;
 			}
+		}*/
+		
+		System.out.println(Arrays.toString(mergedArray));
+		/*for (int i = 0; i < arr.length; i++) {
+		System.out.print(arr[i]+" ");
+	}*/
+	}
+
+	private static int[] accept() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+		int arr[] = new int[size];
+		System.out.println("Enter array elements");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
 		}
-		return mergedArray;
+		return arr;
 	}
 }

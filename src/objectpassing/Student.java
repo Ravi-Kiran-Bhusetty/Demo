@@ -1,6 +1,8 @@
 package objectpassing;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable{
 
 	private int roll;
 	private String name;

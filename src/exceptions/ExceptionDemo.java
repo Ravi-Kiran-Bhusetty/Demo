@@ -9,7 +9,7 @@ public class ExceptionDemo {
 		try {
 			data = 10/0;
 		}catch(ArithmeticException e) {
-			System.out.println(data);
+			//System.out.println(data);
 		}
 		System.out.println("End");
 	}

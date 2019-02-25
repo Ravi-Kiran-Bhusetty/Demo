@@ -74,8 +74,7 @@ public class CeaserCipher {
 		System.out.println(encryptMsg);
 		String s1 = encryptMsg.toString();
 		try {
-			FileOutputStream fileOutputStream = new FileOutputStream(
-					"C:\\Users\\VJIT\\Desktop\\CapgPrograms\\outputstring.txt");
+			FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\VJIT\\Desktop\\CapgPrograms\\outputstring.txt");
 
 			byte[] b = s1.getBytes();
 			fileOutputStream.write(b);
